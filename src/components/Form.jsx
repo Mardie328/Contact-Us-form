@@ -1,24 +1,31 @@
 import React from "react";
 import { useState } from "react";
 
-const Form = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(`name is ${form.name}`);
-  };
-
-  const [form, setForm] = useState({
+const Form = (props) => {
+  const INITIAL_STATE = {
+    id: "",
     name: "",
     email: "",
+    subject: "",
     message: "",
-  });
+  };
+  const [form, setForm] = useState(INITIAL_STATE);
 
   const handleChange = (event) => {
     const updatedForm = {
       ...form,
       [event.target.id]: event.target.value,
     };
+    console.log(updatedForm);
     setForm(updatedForm);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // pass form data to the parent container
+    props.submitForm(form);
+
+    setForm(INITIAL_STATE);
   };
 
   return (
@@ -47,12 +54,19 @@ const Form = () => {
           ></input>
         </div>
         <div>
-          <input type="text" className="input" placeholder="Subject"></input>
+          <input
+            type="text"
+            className="input"
+            id="subject"
+            placeholder="Subject"
+            value={form.subject}
+            onChange={handleChange}
+          ></input>
         </div>
         <div>
           <textarea
             type="text"
-            className="message"
+            className="input"
             id="message"
             placeholder="Message"
             rows={"5"}
