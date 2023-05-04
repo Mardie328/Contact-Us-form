@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Formik } from "formik";
 
 const Form = (props) => {
   const INITIAL_STATE = {
@@ -16,7 +17,7 @@ const Form = (props) => {
       ...form,
       [event.target.id]: event.target.value,
     };
-    console.log(updatedForm);
+
     setForm(updatedForm);
   };
 
@@ -24,7 +25,6 @@ const Form = (props) => {
     event.preventDefault();
     // pass form data to the parent container
     props.submitForm(form);
-
     setForm(INITIAL_STATE);
   };
 
