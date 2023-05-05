@@ -2,16 +2,19 @@ import React from "react";
 import HeaderComponent from "./HeaderComponent.jsx";
 import FormComponent from "./FormComponent.jsx";
 import axios from "axios";
+import { nanoid } from "nanoid";
 
 const FormContainer = () => {
   const submitFormData = (form) => {
     const userData = {
-      id: form.id,
+      id: nanoid(),
       name: form.name,
       email: form.email,
       subject: form.subject,
       message: form.message,
     };
+
+    console.log(userData);
 
     axios
       .post(

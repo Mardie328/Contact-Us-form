@@ -3,7 +3,7 @@ import { nanoid } from "nanoid";
 
 const FormComponent = (props) => {
   const INITIAL_STATE = {
-    id: nanoid(),
+    id: "",
     name: "",
     email: "",
     subject: "",
