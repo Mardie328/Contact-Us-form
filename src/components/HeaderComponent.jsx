@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-const Header = () => {
+const HeaderComponent = () => {
   return (
     <div className="header-container">
       <h1 className="form-header">Contact Us</h1>
@@ -12,4 +12,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderComponent;
