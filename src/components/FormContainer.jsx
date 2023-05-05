@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderComponent from "./HeaderComponent.jsx";
-import Form from "./form.jsx";
+import FormComponent from "./FormComponent.jsx";
 import axios from "axios";
 
 const FormContainer = () => {
@@ -26,7 +26,7 @@ const FormContainer = () => {
   return (
     <div className="form-container">
       <HeaderComponent />
-      <Form submitForm={submitFormData} />
+      <FormComponent submitForm={submitFormData} />
     </div>
   );
 };

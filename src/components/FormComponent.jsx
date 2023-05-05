@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { nanoid } from "nanoid";
 
-const Form = (props) => {
+const FormComponent = (props) => {
   const INITIAL_STATE = {
     id: nanoid(),
     name: "",
@@ -117,4 +117,4 @@ const Form = (props) => {
   );
 };
 
-export default Form;
+export default FormComponent;
