@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { nanoid } from "nanoid";
 
 const Form = (props) => {
   const INITIAL_STATE = {
+    id: nanoid(),
     name: "",
     email: "",
     subject: "",
