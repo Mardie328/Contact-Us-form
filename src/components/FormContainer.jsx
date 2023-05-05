@@ -14,8 +14,6 @@ const FormContainer = () => {
       message: form.message,
     };
 
-    console.log(userData);
-
     axios
       .post(
         "https://my-json-server.typicode.com/tundeojediran/contacts-api-server/inquiries",
