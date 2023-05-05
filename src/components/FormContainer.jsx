@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./header";
-import Form from "./form";
+import Header from "./header.jsx";
+import Form from "./form.jsx";
 import axios from "axios";
 
 const FormContainer = () => {
